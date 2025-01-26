@@ -1,0 +1,162 @@
+.page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: #000; 
+  color: white;
+}
+
+.headingContainer {
+  display: flex;
+  justify-content: space-between; 
+  width: 95%;
+  position: absolute;
+  top: 15px;
+  padding: 0 30px; 
+}
+
+.heading {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.yearContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.year {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.year::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 50%;
+  width: 20px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.year::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  width: 20px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.yearContainer::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 4px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%);
+}
+
+.yearContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 4px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%);
+}
+
+.contentContainer {
+  background: rgba(0, 0, 0, 0.7); 
+  padding: 70px 25px;
+  border-radius: 10px;
+  max-width: 670px;
+  text-align: center;
+  margin-left: 6%; 
+
+}
+
+.description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.ctaButton {
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #0056b3;
+}
+
+.scrollContainer {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrollDownButton {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.scrollDownText {
+  font-size: 1rem;
+  color: rgb(232, 229, 229);
+  margin-bottom: 10px;
+}
+
+.grayArrow {
+  width: 24px;
+  height: 24px;
+  border-left: 3px solid rgb(232, 229, 229);
+  border-bottom: 3px solid rgb(232, 229, 229);
+  transform: rotate(-45deg);
+  animation: moveGrayArrow 1.5s infinite ease-in-out;
+}
+
+
+@keyframes moveGrayArrow {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+}
+

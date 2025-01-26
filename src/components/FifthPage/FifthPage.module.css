@@ -1,0 +1,235 @@
+.page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  opacity: 0.9;
+}
+
+.headingContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  position: absolute;
+  top: 15px;
+  padding: 0 30px;
+}
+
+.heading {
+  font-size: 2.9rem;
+  font-weight: bold;
+  color: white;
+}
+
+.yearContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.year {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  position: relative;
+}
+
+.year::before, .year::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 4px;
+  background-color: rgb(223, 223, 223);
+}
+
+.year::before {
+  left: -24px;
+}
+
+.year::after {
+  right: -24px;
+}
+
+.yearContainer::before, .yearContainer::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 20px;
+  background-color: rgb(223, 223, 223);
+  transform: translateX(-50%);
+}
+
+.yearContainer::before {
+  top: 20px;
+  left: 50%;
+}
+
+.yearContainer::after {
+  bottom: 20px;
+  left: 50%;
+}
+
+.contentContainer {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px 35px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 600px;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.stats {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+}
+
+.stats li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.stats li img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px; 
+  filter: invert(100%);
+}
+
+
+.highlighted {
+  color: #af9595;
+  font-size: 1.9rem !important;
+}
+
+.timelineContainer {
+  position: absolute;
+  bottom: -30px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
+.timelineContainer:hover {
+  cursor: pointer;
+}
+
+.year2024 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: rgba(188, 188, 188, 1);
+}
+
+.scrollDownText {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: rgba(188, 188, 188, 0.8);
+  font-weight: 600;
+}
+
+.grayArrow {
+  width: 24px;
+  height: 24px;
+  border-left: 3px solid rgb(192, 192, 192);
+  border-bottom: 3px solid rgb(192, 192, 192);
+  transform: rotate(-45deg);
+  animation: moveGrayArrow 1.5s infinite ease-in-out;
+  margin-bottom: 15px;
+}
+
+@keyframes moveGrayArrow {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+}
+
+.timelineLine {
+  width: 3px;
+  height: 0;
+  background-color: black;
+  transition: height 0.4s ease;
+}
+
+
+.scrollContainer {
+  position: absolute;
+  bottom: 10%;
+
+  transform: translateX(0); 
+  opacity: 1;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 10px; 
+  transition: opacity 0.5s ease;
+}
+
+.scrollButton {
+  padding: 0; 
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.838);
+  background: none;
+  border: none; 
+  cursor: pointer;
+  text-decoration: none; 
+  transition: color 0.3s ease;
+}
+
+.scrollButton:hover {
+  color: rgb(255, 255, 255);
+}
+
+.scrollButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid rgba(255, 255, 255, 0.838);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.838);
+  transform: rotate(-45deg);
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+}

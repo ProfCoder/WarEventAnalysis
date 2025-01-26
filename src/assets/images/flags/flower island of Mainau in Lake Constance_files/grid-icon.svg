@@ -1,0 +1,14 @@
+<svg id="grid-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <title>grid-icon2</title>
+  <g id="grid">
+    <rect id="rectangle9" width="5.71" height="5.71" fill="#707070"/>
+    <rect id="rectangle8" y="12.14" width="5.71" height="5.71" fill="#707070"/>
+    <rect id="rectangle7" y="24.29" width="5.71" height="5.71" fill="#707070"/>
+    <rect id="rectangle6" x="12.14" width="5.71" height="5.71" fill="#707070"/>
+    <rect id="rectangle5" x="12.14" y="12.14" width="5.71" height="5.71" fill="#707070"/>
+    <rect id="rectangle4" x="12.14" y="24.29" width="5.71" height="5.71" fill="#707070"/>
+    <rect id="rectangle3" x="24.29" width="5.71" height="5.71" fill="#707070"/>
+    <rect id="rectangle2" x="24.29" y="12.14" width="5.71" height="5.71" fill="#707070"/>
+    <rect id="rectangle1" x="24.29" y="24.29" width="5.71" height="5.71" fill="#707070"/>
+  </g>
+</svg>

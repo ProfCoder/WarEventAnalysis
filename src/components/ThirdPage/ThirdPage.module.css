@@ -1,0 +1,129 @@
+.page {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.heading {
+  position: absolute;
+  top: 45%; 
+  left:60%; 
+  transform: translate(-25%, -66%); 
+  font-size: 1.7em;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8); 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  text-align: center; 
+  white-space: nowrap;
+}
+
+.movableText {
+  position: absolute;
+  left: 7%;
+  right: 10%;
+  top: 10%;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.movableText:nth-child(2) {
+  top: auto; 
+  bottom: 25%; 
+  right: 3%; 
+  left: auto; 
+  width: 35%; 
+  font-size: 2rem; 
+  color: #4d2c2c; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+  text-align: right; 
+  color:red;
+}
+
+.textBelowButton {
+  position: absolute;
+  right: 3%; 
+  top: 70%; 
+  width: 33%;
+  left: auto;
+  font-size: 1.5rem; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+  color: black; 
+  text-align: right;
+  line-height: 1.4; 
+  font-size: 2rem;
+}
+
+
+
+span {
+  font-weight: 600;
+  /* font-style: italic; */
+  color: rgb(86, 0, 0);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+  font-size: 2.5rem;
+}
+
+.scrollContainer {
+  position: absolute;
+  bottom: 10%;
+  right: 20%; 
+  transform: translateX(0); 
+  opacity: 1;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 10px; 
+  transition: opacity 0.5s ease;
+}
+
+.scrollButton {
+  padding: 0; 
+  font-size: 1rem;
+  color: rgba(128, 128, 128, 0.9);
+  background: none;
+  border: none; 
+  cursor: pointer;
+  text-decoration: none; 
+  transition: color 0.3s ease;
+}
+
+.scrollButton:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.scrollButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid rgba(128, 128, 128, 0.7);
+  border-bottom: 2px solid rgba(128, 128, 128, 0.7);
+  transform: rotate(-45deg);
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+}
